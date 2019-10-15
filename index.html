@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Slider Plugin - gellai.com</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="NOINDEX,NOFOLLOW" />
+        <link href="css/GellaiSlider.css?v=1.0" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/GellaiSlider.js?v=1.152"></script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Image Slider Demo</h1>
+        <h2 style="text-align: center;">Conatainer 1</h2>
+        <hr>
+        <p style="text-align: center;">Vertical panoramic correction is turned on. The parent &lt;div&gt; container's width is 35%.</p>
+        <hr>       
+        <div style="width: 35%; margin: 25px auto; font-family: Verdana; font-size: 12px;">
+            <ul id="gllSliderFrame">
+                <li>
+                    <figure>
+                        <img src="images/image1.jpg" />
+                        <figcaption>The 800 x 534 pixel picture has the lowest width/hight ratio in the gallery. Therefore its height is the height of the frame container. Also the longest and highest figcaption. <i>qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty</i></figcaption>
+                    </figure>    
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/image2.jpg" />
+                        <figcaption>This is the highest resolution picture shrinked to the container's width. Also an example for a horizontal panoramic picture.</figcaption>
+                    </figure>    
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/image3.jpg" />
+                        <figcaption>Vertical panoramic picture with the correction set to TRUE (default).</figcaption>
+                    </figure>    
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/image4.jpg" />
+                        <figcaption>This is the smallest picture in the gallery. Its size is inflated to the width of the container.</figcaption>
+                    </figure>    
+                </li>                
+            </ul>
+        </div>
+        <h2 style="text-align: center; margin-top: 40px;">Conatainer 2</h2>
+        <hr>
+        <p style="text-align: center;">Vertical panoramic correction is turned off. The parent &lt;div&gt; container's width is 25%.</p>
+        <hr>        
+        <div style="width: 25%; margin: 25px auto; font-family: Verdana; font-size: 12px;">
+            <ul id="gllSliderFrame2">
+                <li>
+                    <figure>
+                        <img src="images/image1.jpg" />
+                        <figcaption>Because of the adjustment is set to FALSE, this picture's height is not the anchor any more.</figcaption>
+                    </figure>    
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/image2.jpg" />
+                        <figcaption>The horizontal panoramic picture has a big top and bottom paddings.</figcaption>
+                    </figure>    
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/image3.jpg" />
+                        <figcaption>Vertical panoramic picture with the correction set to FALSE. The width is inflated to match the container's size and it's height becomes the largest one.</figcaption>
+                    </figure>    
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/image4.jpg" />
+                        <figcaption>This is the smallest picture in the gallery. Its size is inflated to the width of the container.</figcaption>
+                    </figure>    
+                </li>                
+            </ul>
+        </div>         
+        <script type="text/javascript">
+            window.onload = function() {            
+                var gllSlider = new GellaiSlider();
+                gllSlider.initSlider('gllSliderFrame');    
+                
+                var gllSlider2 = new GellaiSlider(false);
+                gllSlider2.initSlider('gllSliderFrame2');
+            }             
+        </script>
+    </body>
+</html>
